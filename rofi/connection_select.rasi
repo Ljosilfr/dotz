@@ -1,0 +1,50 @@
+* {
+	bg: #131620;
+	fg: rgba(255, 255, 255, 1);
+	accent: rgba(130, 154, 210, 1);
+	transparent: rgba(0, 0, 0, 0);
+}
+configuration {
+	modes: [drun];
+	location: 6;
+}
+prompt, inputbar, case-indicator, overlay, mainbox {
+	enabled: false;
+}
+window {
+	margin: 0 0 30 0;
+	children: [listview];
+	border: 1px;
+	border-radius: 4;
+	border-color: @accent;
+	background-color: @bg;
+	orientation: horizontal;
+}
+listview {
+	padding: 4;
+	lines: 1;
+	columns: 12;
+	children: [element];
+	background-color: @transparent;
+}
+element {
+	padding: 7;
+	children: [element-text];
+	font: "iMWritingDuo Nerd Font Propo 11";
+	background-color: @transparent;
+	orientation: vertical;
+}
+element.selected {
+	border-radius: 4;
+	background-color: @accent;
+}
+element-text {
+	font: "D2CodingLigature Nerd Font Propo 11.50";
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
+	color: @fg;
+	background-color: @transparent;
+}
+element-text.selected {
+	color: black;
+}

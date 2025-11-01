@@ -1,0 +1,99 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "arch2",
+        "color": {
+            "1": "#C5CCFC",
+            "2": "#C5CCFC"
+        },
+        "padding": {
+        	"top": 1,
+        	"left": 4
+        }
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        "break",
+        {
+            "type": "os",
+            "key": " OS",
+            "keyColor": "#FF4BA8",
+            "format": "{2}"
+        },
+        {
+            "type": "kernel",
+            "key": "├",
+            "keyColor": "#C5CCFC"
+        },
+        {
+            "type": "packages",
+            "key": "├󰏖",
+            "keyColor": "#C5CCFC"
+        },
+        {
+            "type": "shell",
+            "key": "└",
+            "keyColor": "#C5CCFC"
+        },
+        "break",
+        {
+            "type": "wm",
+            "key": " DE/WM",
+            "keyColor": "#FF4BA8"
+        },
+        {
+            "type": "lm",
+            "key": "├󰧨",
+            "keyColor": "#C5CCFC"
+        },
+        {
+            "type": "terminal",
+            "key": "├",
+            "keyColor": "#C5CCFC"
+        },
+        "break",
+        {
+            "type": "host",
+            "key": "󰌢 PC",
+            "keyColor": "#FF4BA8"
+        },
+        {
+            "type": "cpu",
+            "key": "├󰻠",
+            "keyColor": "#C5CCFC"
+        },
+        {
+            "type": "gpu",
+            "key": "├󰍛",
+            "keyColor": "#C5CCFC"
+        },
+        {
+            "type": "disk",
+            "key": "├",
+            "keyColor": "#C5CCFC"
+        },
+        {
+            "type": "memory",
+            "key": "├󰘚",
+            "keyColor": "#C5CCFC"
+        },
+        {
+            "type": "swap",
+            "key": "├󰓡",
+            "keyColor": "#C5CCFC"
+        },
+        {
+            "type": "display",
+            "key": "├󰍹",
+            "keyColor": "#C5CCFC"
+        },
+
+        "break",
+        {
+            "type": "colors",
+            "symbol": "square"
+        }
+    ]
+}

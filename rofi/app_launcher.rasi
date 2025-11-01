@@ -1,0 +1,75 @@
+* {
+	bg: rgba(19, 22, 32, 1);
+	bg2: #151515;
+	fg: rgba(255, 255, 255, 1);
+	accent: rgba(130, 154, 210, 1);
+	border: rgba(199, 212, 255, 1);
+	transparent: transparent;
+}
+configuration {
+	modes: [drun];
+	show-icons: true;
+	location: 6;
+}
+prompt, case-indicator, box, overlay, mainbox, cursor {
+	enabled: false;
+}
+window {
+	border-color: @accent;
+	children: [inputbar, listview];
+	orientation: vertical;
+	background-color: @bg;
+	width: 70%;
+	border: 1px;
+	border-color: @accent;
+	margin:0 0 30 0;
+	border-radius: 4;
+}  
+listview {
+	children: [element];
+	orientation: vertical;
+	height: 25px;
+	columns: 4;
+	lines: 6;
+	border-color: @accent;
+	border: 1px 0 0 0;
+	background-color: @transparent;
+	padding: 4;
+}
+inputbar {
+	children: [entry];
+	width: 30%;
+	background-color: @bg2;
+
+}
+entry {
+	vertical-align: 0.5;
+	background-color: @transparent;
+	color: @fg;
+	padding: 0 0 0 8px;
+}
+element {
+	children: [element-icon, element-text];
+	margin: 0;
+	padding: 0.20em;
+	children: [element-icon, element-text];
+	background-color: @transparent;
+}
+element.selected {
+	border-radius: 4;
+	background-color: @accent;
+}
+element-text {
+	font: "D2CodingLigature Nerd Font Propo 12";
+	vertical-align: 0.5;
+	color: @fg;
+	background-color: @transparent;
+}
+element-text.selected {
+	color: black;
+}
+element-icon {
+	vertical-align: 0.5;
+	margin: 0 0.125em 0 0.35em;
+	background-color: @transparent;
+}

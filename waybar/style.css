@@ -1,0 +1,90 @@
+window#waybar {
+	background-color: #2F333D;
+	font-family: "Terminess Nerd Font Propo";
+	font-size: 1.06em;
+	padding: 0;
+}
+#clock, 
+#custom-date, 
+#cpu, 
+#memory, 
+#mpd,
+#gamemode {
+	margin: 0;
+	background-color: transparent;
+	color: #C5CCFC;
+}
+#custom-separator {
+	margin: 0 1em 0 1em;
+	color: #FF4BA8;
+}
+#custom-separator2 {
+	margin: 0 0.6em 0 0.6em;
+	color: #FF4BA8;
+}
+#custom-wrapper_l {
+	font-size: 1em;
+	margin: 0 0.4em 0 5;
+	color: #E9ECEE;
+}
+#custom-wrapper_r {
+	font-size: 1em;
+	margin: 0 5 0 0.4em;
+	color: #E9ECEE;
+}
+#workspaces {
+	font-size: 1em;
+	transition: 0.1s;
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+}
+#workspaces button {
+	min-width: 1.05em;
+	margin: -0.1em;
+	padding: 0;
+	color: #FF4BA8;
+}
+#workspaces button:hover {
+	color: #E9ECEE;
+	background-color: transparent;
+}
+#workspaces button.active {
+	color: white;
+	transition: 0.05s;
+}
+#workspaces button.urgent {
+	color: #FF4BA8;
+}
+#clock {
+	min-width: 80px;
+}
+#custom-date {
+	min-width: 240px;
+}
+#cpu {
+	margin: 0 1.1em 0 0;
+}
+#memory {
+	margin: 0;
+}
+#mpd {
+}
+#gamemode {
+	font-size: 1.4em;
+}
+#gamemode.running {
+	color: #FF4BA8;
+}
+#network {
+	font-size: 1.15em;
+	margin: 0;
+	background-color: transparent;
+	color: #DCE1FF;
+}
+#custom-power {
+	font-size: 1.15em;
+	margin: 0;
+	background-color: transparent;
+	color: #DCE1FF; 
+}

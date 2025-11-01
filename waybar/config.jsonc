@@ -1,0 +1,114 @@
+// -*- mode: jsonc -*-
+{
+    "reload_style_on_change": true,
+    "ipc": true,
+    "spacing": 0,
+    "exclusive": true,
+    "position": "top",
+
+    "modules-left": [
+        "custom/wrapper_l",
+        "hyprland/workspaces",
+        "custom/wrapper_r"
+    ],
+    "modules-center": [
+        "clock",
+	"custom/separator",
+    	"custom/date",
+        "custom/separator",
+        "cpu",
+        "memory",
+        "custom/separator",
+        "mpd",
+        "custom/separator",
+	"gamemode"
+    ],
+    "modules-right": [
+        "custom/wrapper_l",
+	"custom/network",
+	"network",
+	"custom/separator2",
+        "custom/power",
+        "custom/wrapper_r"
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "persistent-workspaces": {
+            "*": 7
+        },
+        "format-icons": {
+            "active": "󰜌",
+            "default": ""
+        }
+    },
+    "clock": {
+        "format": "󱑌 {:%T}",
+	"tooltip": false,
+        "interval": 1
+    },
+    "custom/date": {
+    	"exec": "wb_date_module",
+    	"tooltip": false,
+    	"interval": 60	
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "󰻠 {usage}%"
+    },
+    "memory": {
+        "interval": 1,
+        "format": "󰘚 {percentage}%   {swapPercentage}%"
+    },
+    "mpd": {
+        "album-artist-len": 12,
+        "title-len": 24,
+        "format": "󰽰 {title} — {albumArtist} {stateIcon}",
+        "on-click": "rmpc togglepause",
+        "tooltip": false,
+        "format-paused": "󰽰 {title} — {albumArtist} {stateIcon}",
+        "format-stopped": "󰽰󰽼 mpd's got to take a break yk",
+        "justify": "center",
+        "state-icons": {
+		"playing": "󰽱",
+		"paused": "󰽼"
+        }
+    },
+    "gamemode": {
+        "hide-not-running": false,
+        "format": "{glyph}",
+        "format-alt": "{glyph}",
+        "icon-name": "gaming-app-symbolic",
+        "use-icon": false,
+        "icon-spacing": 0,
+        "icon-size": 0,
+        "glyph": "󰺵"
+    },
+    "network": {
+    	"format": "󰈀",
+	"interval": 1,
+	"tooltip-format": "{ifname} - {ipaddr}",
+	"on-click": "network_selector"
+    },
+    "custom/power": {
+        "format": "",
+        "on-click": "wleave",
+        "tooltip-format": "Session Management"
+    },
+    "custom/separator": {
+    	"format": "",
+        "tooltip": false
+    },
+    "custom/separator2": {
+    	"format": "󰤃",
+    	"tooltip": false
+    },
+    "custom/wrapper_l": {
+    	"format": "",
+    	"tooltip": false
+    },
+    "custom/wrapper_r": {
+    	"format": "",
+    	"tooltip": false
+    }
+    }
+}
