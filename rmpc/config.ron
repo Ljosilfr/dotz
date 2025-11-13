@@ -26,6 +26,23 @@
         vertical_align: Center,
         horizontal_align: Center,
     ),
+    cava: (
+        framerate: 75,
+        autosens: false,
+        sensitivity: 4000,
+        lower_cutoff_freq: 60,
+        higher_cutoff_freq: 12500,
+        input: (
+            method: Pipewire,
+            source: "auto",
+        ),
+        smoothing: (
+            noise_reduction: 0,
+            monstercat: false,
+            waves: false,
+        ),
+        eq: []
+    ),
     keybinds: (
         global: {
             ":":       CommandMode,
@@ -122,7 +139,7 @@
                 direction: Horizontal,
                 panes: [
                     (
-                        size: "100%", 
+                        size: "99%", 
                         pane: Pane(Queue)
                     ),
                 ],
