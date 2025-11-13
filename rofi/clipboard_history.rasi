@@ -6,7 +6,6 @@
 }
 configuration {
 	modes: [drun];
-	show-icons: true;
 	location: 6;
 }
 prompt, case-indicator, box, overlay, mainbox, cursor {
@@ -27,8 +26,8 @@ listview {
 	children: [element];
 	orientation: vertical;
 	height: 25px;
-	columns: 4;
-	lines: 6;
+	columns: 1;
+	lines: 4;
 	border-color: @accent;
 	border: 1px 0 0 0;
 	background-color: @null;
@@ -66,7 +65,5 @@ element-text.selected {
 	color: black;
 }
 element-icon {
-	vertical-align: 0.5;
-	margin: 0 0.125em 0 0.35em;
 	background-color: @null;
 }

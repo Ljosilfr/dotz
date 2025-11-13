@@ -1,8 +1,8 @@
 * {
-	bg: #131620;
-	fg: rgba(255, 255, 255, 1);
-	accent: rgba(130, 154, 210, 1);
-	transparent: rgba(0, 0, 0, 0);
+	bg: #0B1019;
+	fg: #C5CCFC;
+	accent: #BACCFF;
+	null: transparent;
 }
 configuration {
 	modes: [drun];
@@ -21,17 +21,17 @@ window {
 	orientation: horizontal;
 }
 listview {
+	spacing: 0;
 	padding: 4;
 	lines: 1;
 	columns: 12;
 	children: [element];
-	background-color: @transparent;
+	background-color: @null;
 }
 element {
 	padding: 7;
 	children: [element-text];
-	font: "iMWritingDuo Nerd Font Propo 11";
-	background-color: @transparent;
+	background-color: @null;
 	orientation: vertical;
 }
 element.selected {
@@ -39,11 +39,11 @@ element.selected {
 	background-color: @accent;
 }
 element-text {
-	font: "D2CodingLigature Nerd Font Propo 11.50";
+	font: "JetBrainsMono Nerd Font Propo Bold 17px";
 	horizontal-align: 0.5;
 	vertical-align: 0.5;
 	color: @fg;
-	background-color: @transparent;
+	background-color: @null;
 }
 element-text.selected {
 	color: black;
