@@ -1,21 +1,56 @@
 window#waybar {
-	background-color: #2F333D;
-	font-family: "Terminess Nerd Font Propo";
-	font-size: 1.06em;
-	padding: 0;
+	background-color: transparent;
+	font-family: "JetBrainsMono Nerd Font Propo";
+	font-weight: bold;
+	font-size: 13.8px;
 }
 #clock, 
 #custom-date, 
-#cpu, 
-#memory, 
-#mpd,
-#gamemode {
+#hardware-monitor, 
+#mpd {
+	font-size: 1em;
+	padding: 0 5px 0 5px;
 	margin: 0;
-	background-color: transparent;
 	color: #C5CCFC;
 }
+.modules-center {
+	border-radius: 0.6em;
+	border: solid #baccff 1px;
+	padding: 0 5px 0 5px;
+	margin: 0;
+	background-color: rgba(11, 16, 25, 0.6);
+	color: #C5CCFC;
+}
+
+.modules-right,
+.modules-left {
+	border-radius: 4px;
+	border: solid #baccff 1px;
+	padding: 0 5px 0 5px;
+	margin: 0;
+	background-color: rgba(11, 16, 25, 0.6);
+	color: #C5CCFC;
+}
+#gamemode {
+	color: #DCE1FF;
+	margin: 0;
+	background-color: transparent;
+	font-size: 1.4em;
+}
+#network {
+	color: #DCE1FF;
+	margin: 0;
+	background-color: transparent;
+	font-size: 1.2em;
+}
+#custom-power {
+	color: #DCE1FF;
+	margin: 0;
+	background-color: transparent;
+	font-size: 1.2em;
+}
 #custom-separator {
-	margin: 0 1em 0 1em;
+	margin: 0 0.6em 0 0.6em;
 	color: #FF4BA8;
 }
 #custom-separator2 {
@@ -24,13 +59,13 @@ window#waybar {
 }
 #custom-wrapper_l {
 	font-size: 1em;
-	margin: 0 0.4em 0 5;
-	color: #E9ECEE;
+	margin: 0 0.4em 0 0;
+	color: #C5CCFC;
 }
 #custom-wrapper_r {
 	font-size: 1em;
-	margin: 0 5 0 0.4em;
-	color: #E9ECEE;
+	margin: 0 0 0 0.4em;
+	color: #C5CCFC;
 }
 #workspaces {
 	font-size: 1em;
@@ -40,7 +75,7 @@ window#waybar {
 	padding: 0;
 }
 #workspaces button {
-	min-width: 1.05em;
+	min-width: 1em;
 	margin: -0.1em;
 	padding: 0;
 	color: #FF4BA8;
@@ -63,28 +98,12 @@ window#waybar {
 	min-width: 240px;
 }
 #cpu {
-	margin: 0 1.1em 0 0;
+	margin-right: 1.2em; 
 }
+#cpu,
 #memory {
-	margin: 0;
-}
-#mpd {
-}
-#gamemode {
-	font-size: 1.4em;
+	background-color: transparent;
 }
 #gamemode.running {
 	color: #FF4BA8;
-}
-#network {
-	font-size: 1.15em;
-	margin: 0;
-	background-color: transparent;
-	color: #DCE1FF;
-}
-#custom-power {
-	font-size: 1.15em;
-	margin: 0;
-	background-color: transparent;
-	color: #DCE1FF; 
 }
