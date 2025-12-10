@@ -1,0 +1,103 @@
+window#waybar {
+	background-color: rgba(11, 16, 25, 1);
+	font-family: "JetBrainsMono Nerd Font Propo";
+	font-weight: 900;
+	font-size: 13.8px;
+}
+#clock, 
+#custom-date, 
+#hardware-monitor, 
+#mpd {
+	font-size: 1em;
+	padding: 0 5px 0 5px;
+	margin: 0;
+}
+.modules-center {
+	padding: 0 5px 0 5px;
+	margin: 0;
+	color: #C5CCFC;
+}
+
+.modules-right,
+.modules-left {
+	padding: 0 5px 0 5px;
+	margin: 0;
+	color: #C5CCFC;
+}
+#gamemode {
+	color: #DCE1FF;
+	margin: 0;
+	background-color: transparent;
+	font-size: 1.55em;
+}
+#network {
+	color: #DCE1FF;
+	margin: 0;
+	background-color: transparent;
+	font-size: 1.3em;
+}
+#custom-power {
+	color: #DCE1FF;
+	margin: 0;
+	background-color: transparent;
+	font-size: 1.3em;
+}
+#custom-separator {
+    font-weight: 900;
+	margin: 0 0.6em 0 0.6em;
+	color: #FF4BA8;
+}
+#custom-separator2 {
+    font-size: 0.5em;
+    font-weight: 900;
+	margin: 0 1.2em 0 1.2em;
+	color: #FF4BA8;
+}
+#custom-wrapper_l {
+	font-size: 1em;
+	margin: 0 0.3em 0 0;
+	color: #baccff;
+}
+#custom-wrapper_r {
+	font-size: 1em;
+	margin: 0 0 0 0.3em;
+	color: #baccff;
+}
+
+#tags {
+    margin: 0;
+    padding: 0;
+}
+#tags button {
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    font-size: 1em;
+    font-weight: 900;
+    color: #DCE1FF;
+}
+#tags button.focused {
+    color: black;
+    background-color: #DCE1FF;
+}
+#tags button.urgent {
+    color: #fefefe;
+}
+
+#clock {
+	min-width: 80px;
+}
+#custom-date {
+	min-width: 240px;
+}
+#cpu {
+	margin-right: 1.2em; 
+}
+#cpu,
+#memory {
+	background-color: transparent;
+}
+#gamemode.running {
+	color: #FF4BA8;
+}

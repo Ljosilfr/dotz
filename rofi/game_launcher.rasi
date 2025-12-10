@@ -6,31 +6,34 @@
 }
 configuration {
 	modes: [drun];
-	location: 6;
 }
-prompt, inputbar, case-indicator, overlay, mainbox {
+inputbar, entry, prompt, case-indicator, box, overlay, mainbox, cursor, element-icon {
 	enabled: false;
 }
 window {
-    width: 70%;
-	margin: 0 0 30 0;
-	children: [listview];
-	border: 1px;
-	border-radius: 4;
 	border-color: @accent;
+	children: [listview];
+	orientation: vertical;
 	background-color: @bg;
-	orientation: horizontal;
-}
+	border: 1px;
+    width: 350px;
+	border-color: @accent;
+	margin:0 0 30 0;
+	border-radius: 4;
+}  
 listview {
-	spacing: 0;
-	padding: 4;
-	lines: 1;
-	columns: 18;
 	children: [element];
+	orientation: vertical;
+	height: 25px;
+	columns: 1;
+	border-color: @accent;
+	border: 1px 0 0 0;
 	background-color: @null;
+	padding: 4;
 }
 element {
-	padding: 7;
+	margin: 0;
+	padding: 0.20em;
 	children: [element-text];
 	background-color: @null;
 }
@@ -39,8 +42,7 @@ element.selected {
 	background-color: @accent;
 }
 element-text {
-	font: "JetBrainsMono Nerd Font Propo Bold 17px";
-	horizontal-align: 0.5;
+	font: "JetBrainsMono Nerd Font Propo Bold 14px";
 	vertical-align: 0.5;
 	color: @fg;
 	background-color: @null;

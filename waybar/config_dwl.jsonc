@@ -5,41 +5,35 @@
 	"spacing": 0,
 	"exclusive": true,
 	"position": "top",
-    "expand-center": true,
-    "margin-top": 4,
+    "height": 29,
 
-	"modules-center": [
-	    "custom/wrapper_l",
-        "hyprland/workspaces",
-		"custom/wrapper_r",
-		"custom/separator",
+	"modules-left": [
 		"custom/wrapper_l",
-		"group/hardware-monitor",
-		"custom/wrapper_r",
-		"custom/separator",
-        "custom/wrapper_l",
-		"mpd",
-		"custom/wrapper_r",
-		"custom/separator",
-        "custom/wrapper_l",
-		"custom/date",
-		"custom/wrapper_r",
-		"custom/separator",
-		"custom/wrapper_l",
-		"clock",
-		"custom/wrapper_r",
-		"custom/separator",
-        "custom/wrapper_l",
-		"gamemode",
+		"dwl/tags",
 		"custom/wrapper_r"
 	],
+	"modules-center": [
+		"mpd",
+		"custom/separator",
+		"group/hardware-monitor",
+		"custom/separator",
+		"custom/date",
+		"custom/separator",
+		"clock"
+	],
+	"modules-right": [
+		"custom/wrapper_l",
+		"gamemode",
+		"custom/separator2",
+		"network",
+		"custom/separator2",
+		"custom/power",
+		"custom/wrapper_r",
+	],
 
-	"hyprland/workspaces": {
-		"format": "{icon}",
-		"persistent-workspaces": {
-			"*": 4
-		}
-	},
+    "dwl/tags": {
+        "num-tags": 6,
+    },
 	"clock": {
 		"format": "<span size='14pt' rise='-1500'>󱑌</span> {:%T}",
 		"tooltip": false,
@@ -98,7 +92,21 @@
 		"use-icon": false,
 		"icon-spacing": 0,
 		"icon-size": 0,
-		"glyph": "󰊴"
+		"glyph": "󰺵"
+	},
+	"custom/timer": {
+		"exec-if": "wb_timer_module"
+	},
+	"network": {
+		"format": "󰈀",
+		"interval": 1,
+		"tooltip-format": "{ifname} - {ipaddr}",
+		"on-click": "connection_select"
+	},
+	"custom/power": {
+		"format": "",
+		"on-click": "wleave",
+		"tooltip-format": "Session Management"
 	},
 	"custom/separator": {
 		"format": "=",

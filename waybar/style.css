@@ -1,92 +1,70 @@
 window#waybar {
-	background-color: transparent;
-	font-family: "JetBrainsMono Nerd Font Propo";
-	font-weight: bold;
-	font-size: 13.8px;
+    background-color: transparent;
+	font-family: "JetBrainsMonoNL Nerd Font Propo";
+	font-weight: 900;
+	font-size: 13.2px;
 }
 #clock, 
 #custom-date, 
 #hardware-monitor, 
 #mpd {
-	font-size: 1em;
 	padding: 0 5px 0 5px;
 	margin: 0;
-	color: #C5CCFC;
 }
-.modules-center {
-	border-radius: 0.6em;
-	border: solid #baccff 1px;
-	padding: 0 5px 0 5px;
-	margin: 0;
-	background-color: rgba(11, 16, 25, 0.6);
-	color: #C5CCFC;
-}
-
-.modules-right,
-.modules-left {
-	border-radius: 4px;
-	border: solid #baccff 1px;
-	padding: 0 5px 0 5px;
-	margin: 0;
-	background-color: rgba(11, 16, 25, 0.6);
-	color: #C5CCFC;
+.modules-center {background-color: rgba(11,16,25, 1);
+    border: #bcccfc solid 1px;
+    border-radius: 0.3em;
+	color: #C5CCFC; 
+	padding: 0 0.4em 0 0.4em;
 }
 #gamemode {
-	color: #DCE1FF;
+	color: #C5CCFC;
 	margin: 0;
 	background-color: transparent;
-	font-size: 1.4em;
-}
-#network {
-	color: #DCE1FF;
-	margin: 0;
-	background-color: transparent;
-	font-size: 1.2em;
-}
-#custom-power {
-	color: #DCE1FF;
-	margin: 0;
-	background-color: transparent;
-	font-size: 1.2em;
+	font-size: 1.5em;
 }
 #custom-separator {
+    font-weight: 900;
+    font-size: 1.3em;
 	margin: 0 0.6em 0 0.6em;
 	color: #FF4BA8;
 }
 #custom-separator2 {
-	margin: 0 0.6em 0 0.6em;
+    font-size: 0.6em;
+    font-weight: 900;
+	margin: 0 1.2em 0 1.2em;
 	color: #FF4BA8;
 }
 #custom-wrapper_l {
-	font-size: 1em;
-	margin: 0 0.4em 0 0;
-	color: #C5CCFC;
+	font-size: 1.05em;
+	margin: 0 0.3em 0 0;
+	color: #baccff;
 }
 #custom-wrapper_r {
-	font-size: 1em;
-	margin: 0 0 0 0.4em;
-	color: #C5CCFC;
+	font-size: 1.05em;
+	margin: 0 0 0 0.3em;
+	color: #baccff;
 }
+
 #workspaces {
-	font-size: 1em;
-	transition: 0.1s;
-	background-color: transparent;
-	margin: 0;
-	padding: 0;
+    padding: 0;
+    margin: 0 0.2em 0 0.2em;
 }
 #workspaces button {
-	min-width: 1em;
-	margin: -0.1em;
-	padding: 0;
-	color: #FF4BA8;
+    border-radius: 0;
+    font-size: 1em;
+    padding: 0 0.2em 0 0.2em;
+    margin: 0;
+    font-weight: 900;
+    color: #9090c0;
 }
 #workspaces button:hover {
 	color: #E9ECEE;
 	background-color: transparent;
 }
 #workspaces button.active {
-	color: white;
-	transition: 0.05s;
+    font-weight: 900;
+    color: #C5CCFC;
 }
 #workspaces button.urgent {
 	color: #FF4BA8;
@@ -105,5 +83,5 @@ window#waybar {
 	background-color: transparent;
 }
 #gamemode.running {
-	color: #FF4BA8;
+	color: #fcCCc5;
 }
