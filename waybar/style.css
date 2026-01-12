@@ -4,14 +4,15 @@ window#waybar {
 	font-weight: 900;
 	font-size: 13.2px;
 }
-#clock, 
+#custom-time, 
 #custom-date, 
 #hardware-monitor, 
 #mpd {
 	padding: 0 5px 0 5px;
 	margin: 0;
 }
-.modules-center {background-color: rgba(11,16,25, 1);
+.modules-center {
+    background-color: rgba(11,16,25, 1);
     border: #bcccfc solid 1px;
     border-radius: 0.3em;
 	color: #C5CCFC; 
@@ -23,29 +24,28 @@ window#waybar {
 	background-color: transparent;
 	font-size: 1.5em;
 }
+#gamemode.running {
+	color: #ff4ba8;
+}
 #custom-separator {
     font-weight: 900;
-    font-size: 1.3em;
+    font-size: 1.4em;
+    font-family: Terminess Nerd Font Propo;
 	margin: 0 0.6em 0 0.6em;
 	color: #FF4BA8;
 }
-#custom-separator2 {
-    font-size: 0.6em;
-    font-weight: 900;
-	margin: 0 1.2em 0 1.2em;
-	color: #FF4BA8;
-}
 #custom-wrapper_l {
-	font-size: 1.05em;
+    font-family: Terminess Nerd Font Propo;
+	font-size: 1.25em;
 	margin: 0 0.3em 0 0;
 	color: #baccff;
 }
 #custom-wrapper_r {
-	font-size: 1.05em;
+    font-family: Terminess Nerd Font Propo;
+	font-size: 1.25em;
 	margin: 0 0 0 0.3em;
 	color: #baccff;
 }
-
 #workspaces {
     padding: 0;
     margin: 0 0.2em 0 0.2em;
@@ -68,20 +68,4 @@ window#waybar {
 }
 #workspaces button.urgent {
 	color: #FF4BA8;
-}
-#clock {
-	min-width: 80px;
-}
-#custom-date {
-	min-width: 240px;
-}
-#cpu {
-	margin-right: 1.2em; 
-}
-#cpu,
-#memory {
-	background-color: transparent;
-}
-#gamemode.running {
-	color: #fcCCc5;
 }

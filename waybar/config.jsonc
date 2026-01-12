@@ -7,7 +7,6 @@
 	"position": "top",
     "expand-center": true,
     "margin-top": 4,
-
 	"modules-center": [
 	    "custom/wrapper_l",
         "hyprland/workspaces",
@@ -22,33 +21,31 @@
 		"custom/wrapper_r",
 		"custom/separator",
         "custom/wrapper_l",
-		"custom/date",
+		"custom/time",
 		"custom/wrapper_r",
 		"custom/separator",
 		"custom/wrapper_l",
-		"clock",
+		"custom/date",
 		"custom/wrapper_r",
 		"custom/separator",
         "custom/wrapper_l",
 		"gamemode",
 		"custom/wrapper_r"
 	],
-
 	"hyprland/workspaces": {
 		"format": "{icon}",
-		"persistent-workspaces": {
-			"*": 4
-		}
 	},
-	"clock": {
-		"format": "<span size='14pt' rise='-1500'>󱑌</span> {:%T}",
+	"custom/time": {
+        "exec": "short_time",
+		"format": "<span size='14pt' rise='-1500'>󱑌</span> {text}",
 		"tooltip": false,
 		"interval": 1
 	},
 	"custom/date": {
-		"exec": "formatted_date",
+		"exec": "ordinal_date",
+        "format": "<span size='14pt' rise='-1500'>󰭧</span> {text}",
 		"tooltip": false,
-		"interval": 60
+		"interval": 30
 	},
 	"group/toolbar": {
 		"orientation": "horizontal",
@@ -69,26 +66,25 @@
 	},
 	"cpu": {
 		"interval": 1,
-		"format": "<span size='14pt' rise='-1500'>󰻠</span> {usage}%"
+		"format": "<span size='14pt' rise='-1500'>󰻠</span> {usage}%  "
 	},
 	"memory": {
 		"interval": 1,
-		"format": "<span size='14pt' rise='-1500'>󰘚</span> {percentage}%  <span size='large' rise='-1500'></span> {swapPercentage}%"
+		"format": "<span size='14pt' rise='-1500'>󰘚</span> {percentage}%"
 	},
 	"mpd": {
-		"album-artist-len": 12,
-		"title-len": 24,
-		"format": "<span size='14pt' rise='-1500'>󰽰</span> {title} — {albumArtist} {stateIcon}",
-		"on-click": "rmpc togglepause",
-		"tooltip": false,
-		"format-paused": "<span size='14pt' rise='-1500'>󰽰</span> {title} — {albumArtist} {stateIcon}",
-		"format-stopped": "<span size='14pt' rise='-1500'>󰽰󰽼</span> mpd's got to take a break yk",
 		"justify": "center",
-		"state-icons": {
-			"playing": "<span size='14pt' rise='-1500'>󰽱</span>",
-			"paused": "<span size='14pt' rise='-1500'>󰽼</span>"
-			
-		}
+		"tooltip": false,
+		"on-click": "rmpc togglepause",
+		"title-len": 24,
+		"album-artist-len": 12,
+		"format": "{stateIcon} {title} — {albumArtist}",
+		"format-paused": "{stateIcon} {title} — {albumArtist}",
+		"format-stopped": "<span size='14pt' rise='-1500'>󰽳</span>",
+        "state-icons": {
+         "playing": "<span size='14pt' rise='-1500'>󰎇</span>",
+         "paused": "<span size='14pt' rise='-1500'>󰽴</span>"
+        }
 	},
 	"gamemode": {
 		"hide-not-running": false,
@@ -102,10 +98,6 @@
 	},
 	"custom/separator": {
 		"format": "=",
-		"tooltip": false
-	},
-	"custom/separator2": {
-		"format": "┃",
 		"tooltip": false
 	},
 	"custom/wrapper_l": {

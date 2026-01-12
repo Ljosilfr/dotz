@@ -1,0 +1,5 @@
+[services.dell]
+type = "sftp"
+port = 22
+host = "172.24.217.205"
+user = "keren"

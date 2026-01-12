@@ -6,7 +6,7 @@
     show_song_table_header: true,
     draw_borders: true,
     format_tag_separator: " | ",
-    browser_column_widths: [0, 99, 0],
+    browser_column_widths: [0, 100, 0],
     background_color: None,
     text_color: None,
     header_background_color: None,
@@ -57,12 +57,6 @@
     ),
     song_table_format: [
         (
-            prop: (kind: Property(Artist),
-                default: (kind: Text("Unknown"))
-            ),
-            width: "20%",
-        ),
-        (
             prop: (kind: Property(Title),
                 default: (kind: Text("Unknown"))
             ),
@@ -73,6 +67,12 @@
                 default: (kind: Text("Unknown Album"), style: (fg: "white"))
             ),
             width: "30%",
+        ),
+        (
+            prop: (kind: Property(Artist),
+                default: (kind: Text("Unknown"))
+            ),
+            width: "20%",
         ),
         (
             prop: (kind: Property(Duration),

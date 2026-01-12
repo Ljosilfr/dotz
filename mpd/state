@@ -1,16 +1,15 @@
-sw_volume: 31
+sw_volume: 50
 audio_device_state:1:PipeWire Sound Server
-state: pause
+state: stop
 current: 0
-time: 134.51
 random: 1
 repeat: 0
 single: 0
-consume: 1
+consume: 0
 crossfade: 0
 mixrampdb: 0
 mixrampdelay: -1
 lastloadedplaylist: 
 playlist_begin
-0:AC_DC - T.N.T..flac
+0:kankakupiero - HARUKAMIRAI last page. (original edit ver.).flac
 playlist_end

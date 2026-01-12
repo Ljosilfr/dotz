@@ -39,7 +39,7 @@ element.selected {
 	background-color: @accent;
 }
 element-text {
-	font: "JetBrainsMono Nerd Font Propo Bold 17px";
+	font: "JetBrainsMono Nerd Font Propo Bold 19px";
 	horizontal-align: 0.5;
 	vertical-align: 0.5;
 	color: @fg;

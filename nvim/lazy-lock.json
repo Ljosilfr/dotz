@@ -1,0 +1,11 @@
+{
+  "automkdir.nvim": { "branch": "main", "commit": "e36da288764cc41864dc5b4e1234f1425033ce59" },
+  "haskell-scope-highlighting.nvim": { "branch": "master", "commit": "ab5e431929c00f13edddd8e21df36ad16a026b02" },
+  "indent-blankline.nvim": { "branch": "master", "commit": "005b56001b2cb30bfa61b7986bc50657816ba4ba" },
+  "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
+  "lualine.nvim": { "branch": "master", "commit": "47f91c416daef12db467145e16bed5bbfe00add8" },
+  "nvim-colorizer.lua": { "branch": "master", "commit": "a065833f35a3a7cc3ef137ac88b5381da2ba302e" },
+  "nvim-web-devicons": { "branch": "master", "commit": "803353450c374192393f5387b6a0176d0972b848" },
+  "pywal16.nvim": { "branch": "main", "commit": "b21a36cfcbe4581176b79fe46b88ae42ae0fe520" },
+  "smart-pairs": { "branch": "master", "commit": "ac18bf42ac653593ea97cc425596b01c8643662a" }
+}
