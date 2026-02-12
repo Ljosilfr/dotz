@@ -1,0 +1,40 @@
+@import "colors.rasi"
+window {
+	background-color: @bg;
+	border: 1px;
+    border-radius: 0.5em;
+	border-color: @accent;
+}
+inputbar {
+    background-color: @bg;
+}
+listview {
+	background-color: @null;
+    border-color: @accent;
+	border: 1px 0;
+	padding: 4;
+}
+entry {
+	vertical-align: 0.5;
+	padding: 0.15em 0;
+}
+entry, element, element-text {
+	color: @fg;
+	background-color: @null;
+}
+element {
+	padding: 0.25em 0.10em;
+}
+element.selected {
+	border-radius: 4;
+    background-color: @accent;
+}
+element-text.selected {
+	color: @bg;
+}
+element-icon {
+    size: 0.8em;
+	vertical-align: 0.5;
+	margin: 0 0.125em 0 0.35em;
+	background-color: @null;
+}

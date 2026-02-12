@@ -1,0 +1,7 @@
+* {
+	bg: #070301;
+	fg: #FFEBD2;
+	accent: #D8A58C;
+	null: transparent;
+	font: "JetBrainsMono Nerd Font Propo SemiBold 14.25px";
+}

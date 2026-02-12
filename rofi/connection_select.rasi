@@ -1,8 +1,7 @@
+@import "theme.rasi"
+
 * {
-	bg: #0B1019;
-	fg: #C5CCFC;
-	accent: #BACCFF;
-	null: transparent;
+	font: "JetBrainsMono Nerd Font Propo ExtraBold 17.5px";
 }
 configuration {
 	modes: [drun];
@@ -13,38 +12,22 @@ prompt, inputbar, case-indicator, overlay, mainbox {
 }
 window {
     width: 70%;
-	margin: 0 0 30 0;
+	margin: 0 0 30;
 	children: [listview];
-	border: 1px;
-	border-radius: 4;
-	border-color: @accent;
-	background-color: @bg;
 	orientation: horizontal;
 }
 listview {
-	spacing: 0;
+    border: 0;
 	padding: 4;
 	lines: 1;
-	columns: 18;
+	columns: 12;
 	children: [element];
-	background-color: @null;
 }
 element {
-	padding: 7;
+	padding: 0.4em 0;
 	children: [element-text];
-	background-color: @null;
-}
-element.selected {
-	border-radius: 4;
-	background-color: @accent;
 }
 element-text {
-	font: "JetBrainsMono Nerd Font Propo Bold 19px";
 	horizontal-align: 0.5;
 	vertical-align: 0.5;
-	color: @fg;
-	background-color: @null;
-}
-element-text.selected {
-	color: black;
 }

@@ -1,71 +1,81 @@
-window#waybar {
-    background-color: transparent;
+@import url("colors.css");
+* {
+	all: unset;
 	font-family: "JetBrainsMonoNL Nerd Font Propo";
 	font-weight: 900;
-	font-size: 13.2px;
+	font-size: 14.2px;
+	min-height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 #custom-time, 
 #custom-date, 
-#hardware-monitor, 
 #mpd {
-	padding: 0 5px 0 5px;
 	margin: 0;
+}
+#rest_of_it {
+	padding: 0 0.5em;
 }
 .modules-center {
-    background-color: rgba(11,16,25, 1);
-    border: #bcccfc solid 1px;
-    border-radius: 0.3em;
-	color: #C5CCFC; 
-	padding: 0 0.4em 0 0.4em;
-}
-#gamemode {
-	color: #C5CCFC;
+	border: 1.5px solid @border;
+	border-radius: 8px;
+	background-color: @background;	
+	color: @cursor; 
 	margin: 0;
-	background-color: transparent;
-	font-size: 1.5em;
+}
+#quicktoggles {
+	margin-right: 1em;
 }
 #gamemode.running {
-	color: #ff4ba8;
+	color: @color5;
 }
 #custom-separator {
-    font-weight: 900;
-    font-size: 1.4em;
-    font-family: Terminess Nerd Font Propo;
-	margin: 0 0.6em 0 0.6em;
-	color: #FF4BA8;
+	font-family: "Terminess Nerd Font Propo";
+	font-size: 18px;
+	font-weight: 100;
+	margin: 0 1em;
+	color: @color7;
 }
 #custom-wrapper_l {
-    font-family: Terminess Nerd Font Propo;
-	font-size: 1.25em;
-	margin: 0 0.3em 0 0;
-	color: #baccff;
+	font-size: 22px;
+	font-family: "Terminess Nerd Font Propo";
+	margin-right: 0.3em;
+	font-weight: 100;
+	color: @color5;
 }
 #custom-wrapper_r {
-    font-family: Terminess Nerd Font Propo;
-	font-size: 1.25em;
-	margin: 0 0 0 0.3em;
-	color: #baccff;
+	font-size: 22px;
+	font-family: "Terminess Nerd Font Propo";
+	margin-left: 0.3em;
+	font-weight: 100;
+	color: @color5;
 }
-#workspaces {
-    padding: 0;
-    margin: 0 0.2em 0 0.2em;
+#custom-vigiland,
+#custom-openvpn,
+#gamemode {
+	transition: 0.20s;
+	padding: 0 8px;
+	border-radius: 25%;
+}
+#mpd,
+#custom-time,
+#custom-date {
+	transition: 0.20s;
+	border-radius: 70px;
+}
+#workspaces-wrapped {
+	margin-left: 1em;
 }
 #workspaces button {
-    border-radius: 0;
-    font-size: 1em;
-    padding: 0 0.2em 0 0.2em;
-    margin: 0;
-    font-weight: 900;
-    color: #9090c0;
-}
-#workspaces button:hover {
-	color: #E9ECEE;
 	background-color: transparent;
+	margin: 0.45em 0.30em;
+	padding: 0 0.45em;
 }
 #workspaces button.active {
-    font-weight: 900;
-    color: #C5CCFC;
+	background-color: @color5;
+	border-radius: 0.25em;
+	color: @background;
 }
 #workspaces button.urgent {
-	color: #FF4BA8;
+	color: @color3;
 }

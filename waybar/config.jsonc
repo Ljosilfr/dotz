@@ -3,109 +3,107 @@
 	"reload_style_on_change": true,
 	"ipc": true,
 	"spacing": 0,
-	"exclusive": true,
-	"position": "top",
     "expand-center": true,
-    "margin-top": 4,
+    "margin-top": 6,
+	"position": "top",
+    "margin-bottom": 0,
 	"modules-center": [
-	    "custom/wrapper_l",
-        "hyprland/workspaces",
-		"custom/wrapper_r",
-		"custom/separator",
-		"custom/wrapper_l",
-		"group/hardware-monitor",
-		"custom/wrapper_r",
-		"custom/separator",
+        "group/workspaces-wrapped",
+        "custom/separator",
         "custom/wrapper_l",
-		"mpd",
-		"custom/wrapper_r",
-		"custom/separator",
-        "custom/wrapper_l",
-		"custom/time",
-		"custom/wrapper_r",
-		"custom/separator",
-		"custom/wrapper_l",
-		"custom/date",
-		"custom/wrapper_r",
-		"custom/separator",
-        "custom/wrapper_l",
-		"gamemode",
-		"custom/wrapper_r"
+        "group/rest_of_it",
+        "custom/wrapper_r",
+        "custom/separator",
+        "group/quicktoggles"
 	],
-	"hyprland/workspaces": {
-		"format": "{icon}",
+    "ext/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}"
+    },
+	"mpd": {
+		"tooltip": false,
+		"on-click": "rmpc togglepause",
+		"title-len": 30,
+		"album-artist-len": 50,
+		"format": "{stateIcon} {title} — {albumArtist}",
+		"format-paused": "{stateIcon} {title} — {albumArtist}",
+		"format-stopped": "<span size='13.5pt' rise='-1500'>󰽳</span>",
+        "state-icons": {
+         "playing": "<span size='13.5pt' rise='-1500'>󰎇</span>",
+         "paused": "<span size='13.5pt' rise='-1500'>󰽴</span>"
+        }
 	},
 	"custom/time": {
         "exec": "short_time",
-		"format": "<span size='14pt' rise='-1500'>󱑌</span> {text}",
+        "on-click": "gnome-clocks",
+		"format": "<span size='13.5pt' rise='-1500'>󱑌</span> {text}",
 		"tooltip": false,
 		"interval": 1
 	},
 	"custom/date": {
 		"exec": "ordinal_date",
-        "format": "<span size='14pt' rise='-1500'>󰭧</span> {text}",
+        "on-click": "gnome-clocks",
+        "format": "<span size='13.5pt' rise='-1500'>󰭧</span> {text}",
 		"tooltip": false,
 		"interval": 30
-	},
-	"group/toolbar": {
-		"orientation": "horizontal",
-		"modules":[
-			"custom/wrapper_l",
-			"gamemode",
-			"custom/separator2",
-			"network",
-			"custom/wrapper_r"
-		]
-	},
-	"group/hardware-monitor": {
-		"orientation": "horizontal",
-		"modules":[
-			"cpu",
-			"memory"
-		]
-	},
-	"cpu": {
-		"interval": 1,
-		"format": "<span size='14pt' rise='-1500'>󰻠</span> {usage}%  "
-	},
-	"memory": {
-		"interval": 1,
-		"format": "<span size='14pt' rise='-1500'>󰘚</span> {percentage}%"
-	},
-	"mpd": {
-		"justify": "center",
-		"tooltip": false,
-		"on-click": "rmpc togglepause",
-		"title-len": 24,
-		"album-artist-len": 12,
-		"format": "{stateIcon} {title} — {albumArtist}",
-		"format-paused": "{stateIcon} {title} — {albumArtist}",
-		"format-stopped": "<span size='14pt' rise='-1500'>󰽳</span>",
-        "state-icons": {
-         "playing": "<span size='14pt' rise='-1500'>󰎇</span>",
-         "paused": "<span size='14pt' rise='-1500'>󰽴</span>"
-        }
 	},
 	"gamemode": {
 		"hide-not-running": false,
 		"format": "{glyph}",
 		"format-alt": "{glyph}",
-		"icon-name": "gaming-app-symbolic",
 		"use-icon": false,
 		"icon-spacing": 0,
 		"icon-size": 0,
-		"glyph": "󰊴"
+		"glyph": "<span size='16pt' rise='-1500'>󰊴</span>"
 	},
+    "custom/vigiland" : {
+        "exec": "vigilandctl -s",
+        "on-click": "vigilandctl -t",
+		"tooltip": false,
+        "interval": 1
+    },
+    "custom/openvpn" : {
+        "exec": "openvpn_indicator",
+        "on-click": "vpn_toggle",
+		"tooltip": false,
+        "interval": 1
+    },
+    "group/workspaces-wrapped": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/wrapper_l",
+            "ext/workspaces",
+            "custom/wrapper_r"
+        ]
+    },
+    "group/rest_of_it": {
+        "orientation": "horizontal",
+        "modules": [
+            "mpd",
+            "custom/separator",
+            "custom/time",
+            "custom/separator",
+            "custom/date"
+        ]
+    },
+    "group/quicktoggles": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/wrapper_l",
+            "gamemode",
+            "custom/vigiland",
+            "custom/openvpn",
+            "custom/wrapper_r"
+        ]
+    },
+    "custom/wrapper_l": {
+        "format": "["
+    },
+    "custom/wrapper_r": {
+        "format": "]"
+    },
 	"custom/separator": {
 		"format": "=",
-		"tooltip": false
-	},
-	"custom/wrapper_l": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/wrapper_r": {
-		"format": "",
 		"tooltip": false
 	}
     }

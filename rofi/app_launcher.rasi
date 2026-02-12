@@ -1,9 +1,4 @@
-* {
-	bg: #0B1019;
-	fg: #C5CCFC;
-	accent: #BACCFF;
-	null: transparent;
-}
+@import "theme.rasi"
 configuration {
 	modes: [drun];
 	show-icons: true;
@@ -13,60 +8,21 @@ prompt, case-indicator, box, overlay, mainbox, cursor {
 	enabled: false;
 }
 window {
-	border-color: @accent;
 	children: [inputbar, listview];
 	orientation: vertical;
-	background-color: @bg;
-	width: 70%;
-	border: 1px;
-	border-color: @accent;
-	margin:0 0 30 0;
-	border-radius: 4;
+	width: 90%;
+	margin: 0 0 30;
 }  
-listview {
-	children: [element];
-	orientation: vertical;
-	height: 25px;
-	columns: 4;
-	lines: 6;
-	border-color: @accent;
-	border: 1px 0 0 0;
-	background-color: @null;
-	padding: 4;
-}
 inputbar {
 	children: [entry];
-	width: 30%;
-	background-color: @bg;
-
 }
-entry {
-	vertical-align: 0.5;
-	background-color: @null;
-	color: @fg;
-	padding: 0 0 0 8px;
+listview {
+	border: 1px 0 0 0;
+	children: [element];
+	orientation: horizontal;
+	columns: 7;
+	lines: 5;
 }
 element {
-	margin: 0;
-	padding: 0.20em;
 	children: [element-icon, element-text];
-	background-color: @null;
-}
-element.selected {
-	border-radius: 4;
-	background-color: @accent;
-}
-element-text {
-	font: "JetBrainsMono Nerd Font Propo Bold 14px";
-	vertical-align: 0.5;
-	color: @fg;
-	background-color: @null;
-}
-element-text.selected {
-	color: black;
-}
-element-icon {
-	vertical-align: 0.5;
-	margin: 0 0.125em 0 0.35em;
-	background-color: @null;
 }

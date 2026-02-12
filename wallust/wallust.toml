@@ -1,0 +1,35 @@
+# How the image is parse, in order to get the colors:
+# full - resized - wal - thumb -  fastresize - kmeans
+backend = "fastresize"
+
+# What color space to use to produce and select the most prominent colors:
+# lab - labmixed - lch - lchmixed - salience
+color_space = "lchmixed"
+
+# dark - ansidark - dark16 - darkcomp - darkcomp16
+# light - light16 - lightcomp - lightcomp16
+# harddark - harddark16 - harddarkcomp - harddarkcomp16
+# softdark - softdark16 - softdarkcomp - softdarkcomp16
+# softlight - softlight16 - softlightcomp - softlightcomp16
+# saliencedark - saliencedarkbalanced - saliencedarkdistributed - saliencedarklow (each has the 16 variations)
+# salienceligh - saliencelightbalanced - saliencelightdistributed - saliencelightlow (each has the 16 variations)
+palette = "saliencedark"
+
+check_contrast = true
+alpha = 90
+saturation = 25
+no_hooks = false
+
+[templates]
+neovim = { template = 'colors.vim', target = '~/.cache/wal/colors-wal.vim' }
+waybar = { template = 'colors.css', target = '~/.config/waybar/colors.css' }
+dmenu = { template = 'colors.h', target = '~/misc/dmenu/colors.h' }
+mangowc = { template = 'colors.conf', target = '~/.config/mango/colors.conf' }
+conky = { template = 'conky.conf', target = '~/.config/conky/conky.conf' }
+rofi = { template = 'colors.rasi', target = '~/.config/rofi/colors.rasi' }
+mako = { template = 'colors', target = '~/.config/mako/colors' }
+
+[hooks]
+#dmenu_compile = 'dmenu_compile'
+mako_reload = 'makoctl reload'
+mangowc_reload = 'mmsg -d reload_config'

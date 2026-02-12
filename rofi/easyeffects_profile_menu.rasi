@@ -8,7 +8,7 @@ inputbar, entry, prompt, case-indicator, box, overlay, mainbox, cursor, element-
 window {
 	children: [listview];
 	orientation: vertical;
-    width: 25%;
+    width: 19%;
 }  
 listview {
 	children: [element];

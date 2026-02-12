@@ -1,0 +1,31 @@
+@import url("../colors.css");
+* {
+	all: unset;
+	background-color: transparent;
+	font-family: "JetBrainsMonoNL Nerd Font Propo";
+	font-weight: 900;
+	font-size: 14.2px;
+	min-height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+window#waybar {
+	background-color: @background2;
+	border: 1px solid @border;
+	border-radius: 1em;
+}
+.modules-left {
+	margin: 1em;
+}
+.modules-center {
+	margin: 0 1em;
+}
+.modules-right {
+	margin: 1em;
+}
+#custom-string {
+	color: @color5;
+	font-size: 15px;
+	margin: 0.5em;
+	margin-left: 0;
+}

@@ -1,0 +1,18 @@
+include=~/.config/mako/colors
+icon-path=/home/fenrjon/.local/share/icons/Colloid-Grey-Dark
+
+anchor=bottom-center
+layer=overlay
+
+font=JetBrainsMonoNL Nerd Font Propo 16px
+
+width=400
+padding=10
+margin=6,0,6,0
+outer-margin=18
+
+border-size=1
+border-radius=10
+
+default-timeout=2500
+on-notify=exec notify_sound
