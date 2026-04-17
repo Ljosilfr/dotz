@@ -1,0 +1,105 @@
+// -*- mode: jsonc -*-
+{
+	"reload_style_on_change": true,
+	"ipc": true,
+	"spacing": 0,
+    "expand-center": true,
+    "margin-top": 6,
+    "margin-bottom": 0,
+	"position": "top",
+    "margin-bottom": 0,
+	"modules-center": [
+        "group/workspaces-wrapped",
+        "custom/separator",
+        "custom/wrapper_l",
+        "group/rest_of_it",
+        "custom/wrapper_r",
+        "custom/separator",
+        "group/quicktoggles"
+	],
+    "ext/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}"
+    },
+	"custom/mpd": {
+		"on-click": "rmpc togglepause",
+		"exec": "mpd_stbar",
+		"format": "{}",
+		"interval": 1,
+		"tooltip": false
+	},
+	"custom/time": {
+        "exec": "short_time",
+        "on-click": "gnome-clocks",
+		"format": "<span size='13.5pt' rise='-1500'>󱑌</span> {text}",
+		"tooltip": false,
+		"interval": 1
+	},
+	"custom/date": {
+		"exec": "ordinal_date",
+        "on-click": "gnome-clocks",
+        "format": "<span size='13.5pt' rise='-1500'>󰭧</span> {text}",
+		"tooltip": false,
+		"interval": 30
+	},
+	"gamemode": {
+		"hide-not-running": false,
+		"format": "{glyph}",
+		"format-alt": "{glyph}",
+		"use-icon": false,
+		"icon-spacing": 0,
+		"icon-size": 0,
+		"glyph": "<span size='16pt' rise='-1500'>󰊴</span>"
+	},
+    "custom/swayidle" : {
+        "exec": "swayidle_indicator -s",
+        "on-click": "swayidle_indicator -t",
+		"tooltip": false,
+        "interval": 2
+    },
+    "custom/openvpn" : {
+        "exec": "openvpn_indicator",
+        "on-click": "vpn_toggle",
+		"tooltip": false,
+        "interval": 2
+    },
+    "group/workspaces-wrapped": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/wrapper_l",
+            "ext/workspaces",
+            "custom/wrapper_r"
+        ]
+    },
+    "group/rest_of_it": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/mpd",
+            "custom/separator",
+            "custom/time",
+            "custom/separator",
+            "custom/date"
+        ]
+    },
+    "group/quicktoggles": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/wrapper_l",
+            "gamemode",
+            "custom/swayidle",
+            "custom/openvpn",
+            "custom/wrapper_r"
+        ]
+    },
+    "custom/wrapper_l": {
+        "format": "["
+    },
+    "custom/wrapper_r": {
+        "format": "]"
+    },
+	"custom/separator": {
+		"format": "=",
+		"tooltip": false
+	}
+    }
+}

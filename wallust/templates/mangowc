@@ -1,0 +1,8 @@
+urgentcolor=0xFF008Bff
+focuscolor=0x{{ color4  | saturate(0.8) | lighten(0.6) | strip }}ff
+rootcolor=0x{{ background | strip }}ff
+bordercolor=0x{{ background | strip }}ff
+maximizescreencolor=0x{{ color3 | saturate(0.4) | lighten(0.6) | strip }}ff
+globalcolor=0x{{ color3 | saturate(0.4) | lighten(0.6) | strip }}ff
+overlaycolor=0x{{ color3 | saturate(0.4) | lighten(0.6) | strip }}ff
+scratchpadcolor=0x{{ color3 | saturate(0.4) | lighten(0.6) | strip }}ff

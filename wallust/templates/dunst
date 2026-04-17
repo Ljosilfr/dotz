@@ -1,0 +1,17 @@
+[urgency_low]
+    background = "{{ background }}"
+    foreground = "{{ foreground }}"
+    timeout = 5
+[urgency_normal]
+    background = "{{ background }}"
+    foreground = "{{ foreground }}"
+	frame_color = "{{ color6 }}"
+    timeout = 5
+    override_pause_level = 30
+[urgency_critical]
+    background = "{{ background }}"
+    foreground = "{{ foreground }}"
+    frame_color = "{{ color3 }}"
+    timeout = 10
+    override_pause_level = 60
+    default_icon = dialog-warning

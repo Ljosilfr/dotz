@@ -1,0 +1,24 @@
+@import "theme.rasi"
+configuration {
+	modes: [drun];
+}
+inputbar, entry, prompt, case-indicator, box, overlay, mainbox, cursor, element-icon {
+	enabled: false;
+}
+window {
+	children: [listview];
+	orientation: vertical;
+    width: 25%;
+}  
+listview {
+	children: [element];
+	orientation: vertical;
+	columns: 1;
+    border: none;
+}
+element {
+	children: [element-text];
+}
+element-text {
+    margin: 0 0.40em;
+}

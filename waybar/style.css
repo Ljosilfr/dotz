@@ -8,74 +8,62 @@
 	padding-top: 0;
 	padding-bottom: 0;
 }
-#custom-time, 
-#custom-date, 
-#mpd {
-	margin: 0;
-}
-#rest_of_it {
-	padding: 0 0.5em;
-}
 .modules-center {
-	border: 1.5px solid @border;
-	border-radius: 8px;
+	border: solid 0.1rem rgba(0,0,0, 0.8);
+	border-radius: 0.3rem;
 	background-color: @background;	
-	color: @cursor; 
+	color: @foreground; 
 	margin: 0;
+	padding: 0;
 }
-#quicktoggles {
-	margin-right: 1em;
-}
-#gamemode.running {
-	color: @color5;
-}
-#custom-separator {
-	font-family: "Terminess Nerd Font Propo";
-	font-size: 18px;
-	font-weight: 100;
-	margin: 0 1em;
-	color: @color7;
-}
-#custom-wrapper_l {
-	font-size: 22px;
-	font-family: "Terminess Nerd Font Propo";
-	margin-right: 0.3em;
-	font-weight: 100;
-	color: @color5;
-}
-#custom-wrapper_r {
-	font-size: 22px;
-	font-family: "Terminess Nerd Font Propo";
-	margin-left: 0.3em;
-	font-weight: 100;
-	color: @color5;
-}
-#custom-vigiland,
+#custom-swayidle,
 #custom-openvpn,
 #gamemode {
-	transition: 0.20s;
-	padding: 0 8px;
-	border-radius: 25%;
+	border: solid 0.1rem transparent;
+	padding: 0.1rem 0.55rem;
+	border-radius: 0.3rem;
+	margin: 0.15rem;
+	margin-left: 0;
 }
-#mpd,
-#custom-time,
-#custom-date {
-	transition: 0.20s;
-	border-radius: 70px;
+#gamemode:hover,
+#custom-swayidle:hover,
+#custom-openvpn:hover {
+	transition: 0.2s;
+	border: solid 0.1rem @color6;
+	background-color: rgba(255,255,255, 0.2);
 }
-#workspaces-wrapped {
-	margin-left: 1em;
+#gamemode.running {
+	color: @gamemode;
+}
+#workspaces {
+	margin-left: 0.75rem;
 }
 #workspaces button {
+	transition: 0.2s;
+	background-color: @color9;
+	border: 0.1rem solid transparent;
+	border-radius: 1rem;
+	margin: 0.6rem 0.15em;
+	padding: 0.1rem 0;
+	min-width: 0.5rem;
+	min-height: 0.5rem;
+}
+#workspaces button:hover,
+#workspaces button.active:hover{
+	transition: 0.2s;
+	border: solid 0.1rem @gamemode;
 	background-color: transparent;
-	margin: 0.45em 0.30em;
-	padding: 0 0.45em;
 }
 #workspaces button.active {
-	background-color: @color5;
-	border-radius: 0.25em;
+	padding: 0.1rem 0;
+	margin: 0.4rem 0.15em;
+	transition: 0.2s;
+	min-height: 0.5rem;
+	min-width: 1rem;
+	background-color: @color6;
+	border-radius: 0.3rem;
 	color: @background;
 }
 #workspaces button.urgent {
-	color: @color3;
+	color: @color9;
 }

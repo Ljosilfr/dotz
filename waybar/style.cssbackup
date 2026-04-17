@@ -1,0 +1,84 @@
+@import url("colors.css");
+* {
+	all: unset;
+	font-family: "JetBrainsMonoNL Nerd Font Propo";
+	font-weight: 900;
+	font-size: 14.2px;
+	min-height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+#custom-time, 
+#custom-date, 
+#mpd {
+	margin: 0;
+}
+#rest_of_it {
+	padding: 0 0.5em;
+}
+.modules-center {
+	border: 0.6px solid @color6;
+	border-radius: 6px;
+	background-color: @background;	
+	color: @foreground; 
+	margin: 0;
+}
+#quicktoggles {
+	margin-right: 1em;
+}
+#gamemode.running {
+	color: @color6;
+}
+#custom-separator {
+	font-family: "Terminess Nerd Font Propo";
+	font-size: 18px;
+	font-weight: 100;
+	margin: 0 1em;
+	color: @color5;
+}
+#custom-wrapper_l {
+	font-size: 22px;
+	font-family: "Terminess Nerd Font Propo";
+	margin-right: 0.3em;
+	font-weight: 100;
+}
+#custom-wrapper_r {
+	font-size: 22px;
+	font-family: "Terminess Nerd Font Propo";
+	margin-left: 0.3em;
+	font-weight: 100;
+}
+#custom-wrapper_l,
+#custom-wrapper_r {
+	color: @color6;
+}
+#custom-swayidle,
+#custom-openvpn,
+#gamemode {
+	transition: 0.20s;
+	padding: 0 8px;
+	border-radius: 25%;
+}
+#mpd,
+#custom-time,
+#custom-date {
+	transition: 0.20s;
+	border-radius: 70px;
+}
+#workspaces-wrapped {
+	margin-left: 1em;
+}
+#workspaces button {
+	background-color: transparent;
+	margin: 0.45em 0.30em;
+	padding: 0 0.45em;
+}
+#workspaces button.active {
+	min-width: 1rem;
+	background-color: @color6;
+	border-radius: 0.25em;
+	color: @background;
+}
+#workspaces button.urgent {
+	color: @color9;
+}

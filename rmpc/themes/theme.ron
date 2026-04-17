@@ -12,10 +12,10 @@
     modal_backdrop: false,
     preview_label_style: (fg: "yellow"),
     preview_metadata_group_style: (fg: "yellow", modifiers: "Bold"),
-    highlighted_item_style: (fg: "5", modifiers: "Bold"),
-    current_item_style: (fg: "black", bg: "5", modifiers: "Bold"),
-    borders_style: (fg: "5"),
-    highlight_border_style: (fg: "5"),
+    highlighted_item_style: (fg: "6", modifiers: "Bold"),
+    current_item_style: (fg: "black", bg: "6", modifiers: "Bold"),
+    borders_style: (fg: "6"),
+    highlight_border_style: (fg: "6"),
     symbols: (
         song: "󰽴",
         dir: "󰽯",
@@ -27,30 +27,30 @@
         playlist_style: None,
     ),
     level_styles: (
-        info: (fg: "5", bg: "black"),
+        info: (fg: "6", bg: "black"),
         warn: (fg: "yellow", bg: "black"),
-        error: (fg: "5", bg: "black"),
+        error: (fg: "6", bg: "black"),
         debug: (fg: "light_green", bg: "black"),
         trace: (fg: "magenta", bg: "black"),
     ),
     progress_bar: (
         symbols: ["▬", "▬", "▬", "▬", "▬"],
         track_style: (fg: "#505050"),
-        elapsed_style: (fg: "5"),
-        thumb_style: (fg: "5"),
+        elapsed_style: (fg: "6"),
+        thumb_style: (fg: "6"),
     ),
     scrollbar: (
         symbols: ["│", "█", "▲", "▼"],
         track_style: (),
         ends_style: (),
-        thumb_style: (fg: "5"),
+        thumb_style: (fg: "6"),
     ),
     tab_bar: (
-        active_style: (fg: "black", bg: "5", modifiers: "Bold"),
+        active_style: (fg: "black", bg: "6", modifiers: "Bold"),
         inactive_style: (),
     ),
     cava: (
-        bar_color: Single("5"),
+        bar_color: Single("6"),
         bar_width: 1,
     ),
     song_table_format: [
@@ -119,7 +119,7 @@
                                                     size: "49%",
                                                     pane: Pane(Property(
                                                         content: [
-                                                            (kind: Property(Song(Title)), style: (fg: "5", modifiers: "Bold"), default: (kind: Text("Unknown"), style: (fg: "red", modifiers: "Bold"))),
+                                                            (kind: Property(Song(Title)), style: (fg: "6", modifiers: "Bold"), default: (kind: Text("Unknown"), style: (fg: "red", modifiers: "Bold"))),
                                                         ],
                                                         align: Left,
                                                     )),
@@ -129,14 +129,14 @@
                                                     pane: Pane(Property(
                                                         content: [
                                                             (kind: Group([
-                                                                (kind: Property(Status(RepeatV2(on_label: "󰑖", off_label: "󰑖", on_style: (fg: "5"), on_off: (fg: "white"))))),
+                                                                (kind: Property(Status(RepeatV2(on_label: "󰑖", off_label: "󰑖", on_style: (fg: "6"), on_off: (fg: "white"))))),
                                                                 (kind: Text(" • ")),
-                                                                (kind: Property(Status(RandomV2(on_label: "", off_label: "", on_style: (fg: "5"), on_off: (fg: "white"))))),
+                                                                (kind: Property(Status(RandomV2(on_label: "", off_label: "", on_style: (fg: "6"), on_off: (fg: "white"))))),
                                                                 (kind: Text(" • ")),
-                                                                (kind: Property(Status(ConsumeV2(on_label: "󰴀", off_label: "󰴀", oneshot_label: "󰴀", on_style: (fg: "5"), on_off: (fg: "white"), oneshot_style: (fg: "red"))))),
+                                                                (kind: Property(Status(ConsumeV2(on_label: "󰴀", off_label: "󰴀", oneshot_label: "󰴀", on_style: (fg: "6"), on_off: (fg: "white"), oneshot_style: (fg: "red"))))),
                                                                 (kind: Text(" • ")),
                                                             ])),
-                                                                (kind: Property(Status(SingleV2(on_label: "󰑘", off_label: "󰑘", oneshot_label: "󰑘", on_style: (fg: "5"), on_off: (fg: "white"), oneshot_style: (fg: "red"))))),
+                                                                (kind: Property(Status(SingleV2(on_label: "󰑘", off_label: "󰑘", oneshot_label: "󰑘", on_style: (fg: "6"), on_off: (fg: "white"), oneshot_style: (fg: "red"))))),
                                                         ],
                                                         align: Right,
                                                     )),
@@ -161,7 +161,7 @@
 													size: "10%",
 													pane: Pane(Property(
 														content: [
-															(kind: Property(Status(StateV2(playing_label: "", paused_label: "Paused", stopped_label: "Stopped", playing_style: (fg: "5"), paused_style: (fg: "yellow"), stopped_style: (fg: "5"))))),
+															(kind: Property(Status(StateV2(playing_label: "", paused_label: "Paused", stopped_label: "Stopped", playing_style: (fg: "6"), paused_style: (fg: "yellow"), stopped_style: (fg: "6"))))),
 														],
 													)),
 												),

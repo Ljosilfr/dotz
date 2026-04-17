@@ -1,0 +1,26 @@
+
+@import "theme.rasi"
+configuration {
+	modes: [drun];
+}
+inputbar, entry, prompt, case-indicator, box, overlay, mainbox, cursor, element-icon {
+	enabled: false;
+}
+window {
+    width: 165px;
+	children: [listview];
+	orientation: vertical;
+}  
+listview {
+	children: [element];
+	orientation: vertical;
+	columns: 1;
+    border: none;
+}
+element {
+	children: [element-text];
+}
+element-text {
+	font: "JetBrainsMono Nerd Font Propo ExtraBold 16px";
+    margin: 0 0.40em;
+}

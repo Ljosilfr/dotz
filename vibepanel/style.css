@@ -1,0 +1,9 @@
+:root {
+	--font-family: "JetBrainsMonoNL Nerd Font Propo";
+	--icon-size: 1.25rem;
+	--pixmap-icon-size: 2rem;
+	font-weight: 700;
+}
+.bar {
+	width: 1rem;
+}

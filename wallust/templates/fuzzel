@@ -1,0 +1,9 @@
+[colors]
+background={{ background | strip }}ff
+border={{ color6 | strip }}ff
+selection={{ color6 | strip }}ff
+selection-text={{ background | strip }}ff
+selection-match={{ color2 | strip }}ff
+prompt={{ color6 | strip }}ff
+input={{ foreground | strip }}ff
+text={{ foreground | strip }}ff

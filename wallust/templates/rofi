@@ -1,7 +1,7 @@
 * {
-	bg: #010101;
-	fg: #F0F0F0;
-	accent: #DC7979;
+	bg: {{ background }};
+	fg: {{ foreground }};
+	accent: {{ color6 }};
 	null: transparent;
 	font: "JetBrainsMono Nerd Font Propo SemiBold 14.25px";
 }

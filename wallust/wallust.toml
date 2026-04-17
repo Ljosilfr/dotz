@@ -1,8 +1,6 @@
-# How the image is parse, in order to get the colors:
 # full - resized - wal - thumb -  fastresize - kmeans
 backend = "fastresize"
 
-# What color space to use to produce and select the most prominent colors:
 # lab - labmixed - lch - lchmixed - salience
 color_space = "lchmixed"
 
@@ -16,20 +14,22 @@ color_space = "lchmixed"
 palette = "saliencedark"
 
 check_contrast = true
-alpha = 90
-saturation = 25
+alpha = 75
+saturation = 45
 no_hooks = false
 
 [templates]
-neovim = { template = 'colors.vim', target = '~/.cache/wal/colors-wal.vim' }
-waybar = { template = 'colors.css', target = '~/.config/waybar/colors.css' }
-dmenu = { template = 'colors.h', target = '~/misc/dmenu/colors.h' }
-mangowc = { template = 'colors.conf', target = '~/.config/mango/colors.conf' }
-conky = { template = 'conky.conf', target = '~/.config/conky/conky.conf' }
-rofi = { template = 'colors.rasi', target = '~/.config/rofi/colors.rasi' }
-mako = { template = 'colors', target = '~/.config/mako/colors' }
+waybar = { template = 'waybar', target = '~/.config/waybar/colors.css' }
+vibepanel = { template = 'vibepanel', target = '~/.config/vibepanel/config.toml' }
+foot = { template = 'foot', target = '~/.config/foot/colors.ini' }
+fuzzel = { template = 'fuzzel', target = '~/.config/fuzzel/colors.ini' }
+neovim = { template = 'neovim', target = '~/.cache/wal/colors-wal.vim' }
+mangowc = { template = 'mangowc', target = '~/.config/mango/colors.conf' }
+rofi = { template = 'rofi', target = '~/.config/rofi/colors.rasi' }
+dunst = { template = 'dunst', target = '~/.config/dunst/dunstrc.d/colors.conf' }
+yazi_flavor = { template = 'yazi_fv', target = '~/.config/yazi/flavors/wallust.yazi/flavor.toml' }
+yaz_flavorxml = { template = 'yazi_th', target = '~/.config/yazi/flavors/wallust.yazi/tmtheme.xml' }
 
 [hooks]
-#dmenu_compile = 'dmenu_compile'
-mako_reload = 'makoctl reload'
 mangowc_reload = 'mmsg -d reload_config'
+dunst_reload = 'dunstctl reload'
