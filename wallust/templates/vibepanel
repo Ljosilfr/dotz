@@ -1,89 +1,31 @@
-[bar]
-position = "top"
-size = 32
-border_radius = 0
-background_opacity = 0.0
-
-[widgets]
-border_radius = 40
-background_opacity = 1
-left = []
-right = []
-center = [
-	"workspaces",
-	"custom-disk",
-	"cpu",
-	"media",
-	"custom-clock",
-	{ group = ["custom-dateicon", "clock"] },
-	"custom-weather",
-	"tray",
-	"custom-openvpn",
-	"custom-gamemode",
-	"custom-power"
-]
-
-[widgets.custom-disk]
-icon = "󰋊"
-template = "{output}B"
-interval = 30
-exec = "dysk --json /home --units=SI | jq -r '.[] | .stats.available'"
-on_click = "footclient bash -c 'dysk; read'"
-
-[widgets.custom-power]
-icon = "system-shutdown-symbolic"
-on_click = "wleave"
-
-[widgets.custom-clock]
-interval= 2
-exec = "short_time"
-icon = "󱑌"
-on_click = "mmsg -d toggle_named_scratchpad,org.gnome.clocks,none,gnome-clocks"
-
-[widgets.custom-dateicon]
-icon = "󰭧"
-[widgets.clock]
-format = "%a %-d %B %Y"
-
-[widgets.custom-weather]
-exec = "wttr_in"
-template = "{output}"
-interval = 600
-on_click = "xdg-open https://wttr.in/Ocumare+del+Tuy"
-tooltip = "Weather"
-max_chars = 30
-show_if = "ping -c1 -W1 1.1.1.1"
-show_if_interval = 300
-
-[widgets.custom-openvpn]
-icon = "network-vpn-symbolic"
-on_click = "openvpn_init"
-show_if = "pgrep -x openvpn"
-show_if_interval = 3
-
-[widgets.custom-gamemode]
-icon = "input-gaming-symbolic"
-format = "gamemode"
-show_if = "[[ -n $(gamemodelist) ]] && exit 0"
-show_if_interval = 3
-
-[widgets.media]
-visualizer = true
-
-[theme]
-mode = "dark"
-accent = "{{ color6 }}"
-animations = true
-ripple = true
-
-[theme.icons]
-theme = "material"
-weight = 500
-
-[osd]
-enabled = true
-position = "bottom"
-
-[advanced]
-compositor = "mango"
-pango_font_rendering = false
+:root {
+	--color-accent-primary: {{ color6 | saturate(1.0) | lighten(0.58) }};
+	--widget-background-color: {{ background }};
+	--font-family: "JetBrainsMonoNL Nerd Font Propo";
+	--icon-size: 1.38rem;
+	--pixmap-icon-size: 2rem;
+	--outline-color: {{ color6 | saturate(1.0) | lighten(0.58) }};
+	font-weight: 700;
+}
+.notification-toast {
+	margin-bottom: 1.6rem;
+}
+.taskbar-button.active {
+	background-color: #2a2a2a;
+	border: 0.1rem solid {{ color6 | saturate(1.0) | lighten(0.58) }};
+}
+.taskbar-button {
+	border: 0.1rem solid transparent;
+}
+.taskbar-separator {
+	margin: 0 0.38rem;
+	font-size: 1.2rem;
+}
+.weather-popover {
+	--font-size-md: 0.98rem;
+	--font-size-sm: 0.96rem;
+	--font-size-xs: 0.94rem;
+}
+.custom-artix_logo {
+	color: {{ color6 | saturate(1.0) | lighten(0.58) }};
+}

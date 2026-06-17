@@ -1,89 +1,105 @@
 [bar]
-position = "top"
 size = 32
+padding = 4
+inset = 0
+position = "bottom"
 border_radius = 0
 background_opacity = 0.0
 
 [widgets]
-border_radius = 40
-background_opacity = 1
+border_radius = 24
+background_opacity = 1.0
 left = []
 right = []
 center = [
-	"workspaces",
-	"custom-disk",
-	"cpu",
-	"media",
-	"custom-clock",
-	{ group = ["custom-dateicon", "clock"] },
-	"custom-weather",
-	"tray",
-	"custom-openvpn",
-	"custom-gamemode",
-	"custom-power"
+	"custom-artix_logo",
+	{ group = [ "custom-disk", "spacer:4", "cpu" ] },
+	"media", "taskbar",
+	"weather", "clock", "tray",
+	{ group = [ "custom-openvpn", "custom-gamemode", "quick_settings", "notifications" ] }
 ]
 
+[widgets.custom-artix_logo]
+on_click = "applications_menu"
+label = ""
+
+[widgets.taskbar]
+workspace_separator_label = "number"
+show_scratchpad_windows = false
+max_windows = 10
+icon_size = 24
+
 [widgets.custom-disk]
-icon = "󰋊"
-template = "{output}B"
+icon = "devices"
 interval = 30
-exec = "dysk --json /home --units=SI | jq -r '.[] | .stats.available'"
+template = "{output}B"
 on_click = "footclient bash -c 'dysk; read'"
+exec = "dysk --json /home --units=SI | jq -r '.[] | .stats.available'"
 
-[widgets.custom-power]
-icon = "system-shutdown-symbolic"
-on_click = "wleave"
+[widgets.window_title]
+template = "{title}"
+empty_text = "—"
+max_chars = 26
 
-[widgets.custom-clock]
-interval= 2
-exec = "short_time"
-icon = "󱑌"
-on_click = "mmsg -d toggle_named_scratchpad,org.gnome.clocks,none,gnome-clocks"
-
-[widgets.custom-dateicon]
-icon = "󰭧"
-[widgets.clock]
-format = "%a %-d %B %Y"
-
-[widgets.custom-weather]
-exec = "wttr_in"
-template = "{output}"
-interval = 600
-on_click = "xdg-open https://wttr.in/Ocumare+del+Tuy"
-tooltip = "Weather"
-max_chars = 30
-show_if = "ping -c1 -W1 1.1.1.1"
-show_if_interval = 300
-
-[widgets.custom-openvpn]
-icon = "network-vpn-symbolic"
-on_click = "openvpn_init"
-show_if = "pgrep -x openvpn"
-show_if_interval = 3
-
-[widgets.custom-gamemode]
-icon = "input-gaming-symbolic"
-format = "gamemode"
-show_if = "[[ -n $(gamemodelist) ]] && exit 0"
-show_if_interval = 3
+[widgets.quick_settings]
+bluetooth = false
+vpn = false
+power = false
+network = false
+idle_inhibitor = false
+updates = false
 
 [widgets.media]
+art_radius = 18
 visualizer = true
+template = "{art}{title}{controls}"
+max_chars = 20
+
+[weather]
+auto_locate = false
+latitude = 10.128877817564067
+longitude = -66.78012193001523
+units = "metric"
+wind_units = "m/s"
+refresh_interval = 900
+[widgets.weather]
+show_icon = true
+
+[widgets.clock]
+icon = "calendar-today"
+format = "%-I:%M %P • %a %-d %B"
+
+[widgets.custom-openvpn]
+show_if_interval = 3
+on_click = "openvpn_init"
+show_if = "pgrep -x openvpn"
+icon = "vpn_key"
+
+[widgets.custom-gamemode]
+show_if_interval = 3
+icon = "input-gaming-symbolic"
+show_if = "gamemoded -s | grep 'gamemode is active'"
 
 [theme]
 mode = "dark"
-accent = "#DC7979"
-animations = true
 ripple = true
+shadows = true
+animations = true
+outline = true
+outline_width = 1
+outline_opacity = 1.0
 
 [theme.icons]
-theme = "material"
 weight = 500
+theme = "material"
+
+[widgets.notifications]
+toast_position = "bottom-center"
 
 [osd]
 enabled = true
-position = "bottom"
+show_value = true
 
 [advanced]
-compositor = "mango"
+compositor = "auto"
 pango_font_rendering = false

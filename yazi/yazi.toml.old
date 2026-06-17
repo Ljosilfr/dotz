@@ -1,0 +1,28 @@
+[mgr]
+ratio = [2, 8, 0]
+[opener]
+open = [
+    { run = 'xdg-open "$@"', desc = "Open" },
+]
+play_video = [
+	{ run = 'mpv %s', orphan = true, for = "unix" },
+]
+text_editor = [
+	{ run = 'nvim %s', block = true, for = "unix" },
+]
+comic = [
+	{ run = 'mcomix %s', orphan = true, for = "unix" },
+]
+krita = [
+	{ run = 'krita %s', orphan = true, for = "unix" },
+]
+[open]
+rules = [
+	{ mime = "video/*", use = "play_video" },
+	{ mime = "text/*", use = "text_editor" },
+]
+prepend_rules = [
+	{ url = "*.cbz", use = "comic" },
+	{ url = "*.cbr", use = "comic" },
+	{ url = "*.kra", use = "krita" },
+]

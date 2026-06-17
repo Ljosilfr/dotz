@@ -1,8 +1,8 @@
-sw_volume: 15
+sw_volume: 100
 audio_device_state:1:Music Player Daemon
 state: pause
 current: 3
-time: 178.251
+time: 147.02100000000002
 random: 1
 repeat: 0
 single: 0
@@ -12,10 +12,23 @@ mixrampdb: 0
 mixrampdelay: -1
 lastloadedplaylist: 
 playlist_begin
-0:Bring Me The Horizon - in the dark.flac
-1:Bring Me The Horizon - ouch.flac
-2:Bring Me The Horizon - medicine.flac
-3:Bring Me The Horizon - sugar honey ice & tea.flac
-4:Bring Me The Horizon - mother tongue.flac
-5:Bring Me The Horizon - i don't know what to say.flac
+0:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 01-01 Nocturnes, Op. 9_ No. 1 in B-Flat Minor.flac
+1:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 01-02 Nocturnes, Op. 9_ No. 2 in E-Flat Major. Andante.flac
+2:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 01-03 Nocturnes, Op. 9_ No. 3 in B Major.flac
+3:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 01-04 Nocturnes, Op. 15_ Nocturne in F Major, No. 1.flac
+4:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 01-05 Nocturnes, Op. 15_ No. 2 in F-Sharp Major.flac
+5:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 01-06 Nocturnes, Op. 15_ No. 3 in G Minor.flac
+6:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 01-07 Nocturnes, Op. 27_ No. 1 in C-Sharp Minor.flac
+7:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 01-08 Nocturnes, Op. 27_ No. 2 in D-Flat Major.flac
+8:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 01-09 Nocturnes, Op. 32_ No. 1 in B Major.flac
+9:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 01-10 Nocturnes, Op. 32_ No. 2 in A-Flat.flac
+10:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 02-01 Nocturnes, Op. 37_ No. 1 in G Minor.flac
+11:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 02-02 Nocturnes, Op. 37_ No. 2 in G Major.flac
+12:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 02-03 Nocturnes, Op. 48_ No. 1 in C Minor.flac
+13:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 02-04 Nocturnes, Op. 48_ No. 2 in F-Sharp Minor.flac
+14:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 02-05 Nocturnes, Op. 55_ No. 1 in F Minor.flac
+15:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 02-06 Nocturnes, Op. 55_ No. 2 in E-flat.flac
+16:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 02-07 Nocturnes_ No. 17 in B Major, Op. 62 No. 1.flac
+17:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 02-08 Nocturnes_ No. 18 in E Major, Op. 62 No. 2.flac
+18:Johannes Brahms - Chopin_ Nocturnes - Sony Classical Originals - 02-09 Nocturne No. 19 in E Minor, Op. 72 , No. 1.flac
 playlist_end

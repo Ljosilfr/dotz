@@ -1,9 +1,31 @@
 :root {
+	--color-accent-primary: #E0C094;
+	--widget-background-color: #050302;
 	--font-family: "JetBrainsMonoNL Nerd Font Propo";
-	--icon-size: 1.25rem;
+	--icon-size: 1.38rem;
 	--pixmap-icon-size: 2rem;
+	--outline-color: #E0C094;
 	font-weight: 700;
 }
-.bar {
-	width: 1rem;
+.notification-toast {
+	margin-bottom: 1.6rem;
+}
+.taskbar-button.active {
+	background-color: #2a2a2a;
+	border: 0.1rem solid #E0C094;
+}
+.taskbar-button {
+	border: 0.1rem solid transparent;
+}
+.taskbar-separator {
+	margin: 0 0.38rem;
+	font-size: 1.2rem;
+}
+.weather-popover {
+	--font-size-md: 0.98rem;
+	--font-size-sm: 0.96rem;
+	--font-size-xs: 0.94rem;
+}
+.custom-artix_logo {
+	color: #E0C094;
 }

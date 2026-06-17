@@ -1,8 +1,8 @@
 # full - resized - wal - thumb -  fastresize - kmeans
-backend = "fastresize"
+backend = "kmeans"
 
 # lab - labmixed - lch - lchmixed - salience
-color_space = "lchmixed"
+color_space = "lab"
 
 # dark - ansidark - dark16 - darkcomp - darkcomp16
 # light - light16 - lightcomp - lightcomp16
@@ -11,25 +11,24 @@ color_space = "lchmixed"
 # softlight - softlight16 - softlightcomp - softlightcomp16
 # saliencedark - saliencedarkbalanced - saliencedarkdistributed - saliencedarklow (each has the 16 variations)
 # salienceligh - saliencelightbalanced - saliencelightdistributed - saliencelightlow (each has the 16 variations)
-palette = "saliencedark"
+palette = "saliencedarklow"
 
+#fallback_generator = "complementary"
+saturation = 16
+threshold = 12
 check_contrast = true
-alpha = 75
-saturation = 45
 no_hooks = false
 
 [templates]
-waybar = { template = 'waybar', target = '~/.config/waybar/colors.css' }
-vibepanel = { template = 'vibepanel', target = '~/.config/vibepanel/config.toml' }
+css = { template = 'css', target = '~/.config/colors.css' }
+wswitch = { template = 'wswitch', target = '~/.config/wswitch/themes/wallust.ini' }
+vibepanel = { template = 'vibepanel', target = '~/.config/vibepanel/style.css' }
 foot = { template = 'foot', target = '~/.config/foot/colors.ini' }
-fuzzel = { template = 'fuzzel', target = '~/.config/fuzzel/colors.ini' }
 neovim = { template = 'neovim', target = '~/.cache/wal/colors-wal.vim' }
 mangowc = { template = 'mangowc', target = '~/.config/mango/colors.conf' }
 rofi = { template = 'rofi', target = '~/.config/rofi/colors.rasi' }
-dunst = { template = 'dunst', target = '~/.config/dunst/dunstrc.d/colors.conf' }
 yazi_flavor = { template = 'yazi_fv', target = '~/.config/yazi/flavors/wallust.yazi/flavor.toml' }
 yaz_flavorxml = { template = 'yazi_th', target = '~/.config/yazi/flavors/wallust.yazi/tmtheme.xml' }
 
 [hooks]
-mangowc_reload = 'mmsg -d reload_config'
-dunst_reload = 'dunstctl reload'
+notify_and_shit = 'notify-send -i "cs-cat-appearance" "Colos scheme and Wallpaper set!"'

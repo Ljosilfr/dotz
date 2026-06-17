@@ -14,11 +14,11 @@
 		"clock",
 		"clock#date",
 		"custom/weather",
+		"tray",
 		"group/quicktoggles"
 	],
     "ext/workspaces": {
         "on-click": "activate",
-        "format": ""
     },
 	"custom/mpd": {
 		"on-click": "rmpc togglepause",
