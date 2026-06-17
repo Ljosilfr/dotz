@@ -1,0 +1,10 @@
+#—————————————————————————————————|
+urgentcolor=0xFF008Bff
+focuscolor=0x{{ color6 | saturate(1.0) | lighten(0.68) | strip }}ff
+rootcolor=0x{{ background | strip }}ff
+bordercolor=0x{{ color6 | blend(background) | darken(0.4) | strip }}22
+maximizescreencolor=0x{{ color3 | saturate(0.4) | lighten(0.6) | strip }}ff
+globalcolor=0x{{ color6 | saturate(1.0) | lighten(0.68) | strip }}ff
+overlaycolor=0x{{ color6 | saturate(1.0) | lighten(0.68) | strip }}ff
+scratchpadcolor=0x{{ color6 | saturate(1.0) | lighten(0.68) | strip }}ff
+#—————————————————————————————————|

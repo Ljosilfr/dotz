@@ -1,0 +1,7 @@
+[colors]
+background = {{ background }}
+card_bg = {{ background | lighten(0.1) }}
+card_selected = {{ background | lighten(0.2) }}
+text_color = {{ foreground }}
+subtext_color = {{ color3 }}
+border_color = {{ color6 }}
