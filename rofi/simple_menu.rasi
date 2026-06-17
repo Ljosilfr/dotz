@@ -1,0 +1,22 @@
+@import "theme.rasi"
+configuration {
+	modes: [drun];
+}
+entry {
+	prompt: ">";
+}
+window {
+	orientation: vertical;
+}  
+listview {
+	children: [element];
+	orientation: vertical;
+	columns: 1;
+    border: none;
+}
+element {
+	children: [element-text];
+}
+element-text {
+    margin: 0 0.40em;
+}

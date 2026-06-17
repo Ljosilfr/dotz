@@ -3,28 +3,20 @@ configuration {
 	modes: [drun];
     location: 6;
 }
-inputbar, entry, prompt, case-indicator, box, overlay, mainbox, cursor, element-icon {
-	enabled: false;
-}
 window {
 	children: [listview];
 	orientation: horizontal;
-    width: 20%;
-    margin: 1.5em 0;
+    margin: 1.8em 0;
 }  
 listview {
-	children: [element];
 	orientation: horizontal;
 	columns: 10;
     lines: 1;
-    border: none;
-}
-element {
-	children: [element-text];
+	margin: 0.4em;
 }
 element-text {
 	horizontal-align: 0.5;
 	vertical-align: 0.5;
     margin: 0 0.40em;
-	font: "JetBrainsMono Nerd Font Propo SemiBold 25px";
+	font: "JetBrainsMono Nerd Font Propo 25px";
 }

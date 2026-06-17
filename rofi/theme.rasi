@@ -1,29 +1,49 @@
 @import "colors.rasi"
+* {
+	font: "JetBrainsMonoNL Nerd Font Propo Bold 14.7px";
+}
 window {
+	children: [mainbox];
 	background-color: @bg;
-	border: 1px;
     border-radius: 0.5em;
+	border: 1px;
 	border-color: @accent;
 }
+case-indicator {
+	enabled: false;
+}
+mainbox {
+	padding: 0.6em;
+	children: [inputbar,listview];
+	background-color: inherit;
+}
 inputbar {
+	children: [prompt,entry];
+	color: @fg;
     background-color: @bg;
 }
-listview {
-	background-color: @null;
-    border-color: @accent;
-	border: 1px 0;
-	padding: 4;
+prompt {
+	font: "JetBrainsMono Nerd Font Propo Bold 16px";
+	margin: 0.2em 0.2em 0.2em 0;
+	color: @accent;
+	background-color: inherit;
 }
 entry {
+	color: inherit;
+	background-color: inherit;
 	vertical-align: 0.5;
 	padding: 0.15em 0;
 }
-entry, element, element-text {
-	color: @fg;
+listview {
+	margin: 0.4em 0 0 0;
 	background-color: @null;
 }
+element, element-text {
+	color: @fg;
+	background-color: inherit;
+}
 element {
-	padding: 0.25em 0.10em;
+	padding: 0.18em 0.10em;
 }
 element.selected {
 	border-radius: 4;
@@ -33,7 +53,7 @@ element-text.selected {
 	color: @bg;
 }
 element-icon {
-    size: 0.8em;
+    size: 1em;
 	vertical-align: 0.5;
 	margin: 0 0.125em 0 0.35em;
 	background-color: @null;
